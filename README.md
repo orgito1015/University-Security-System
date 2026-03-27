@@ -264,21 +264,26 @@ The system models the following real-world threat vectors relevant to a universi
 
 ---
 
-##  Authors
-
+## Authors
 <table>
   <tr>
     <td align="center" width="50%">
-      <br />
-      <b>Orgito Leka</b>
+      <a href="https://github.com/orgito1015">
+        <img src="https://github.com/ORGITO_USERNAME.png" width="120px;" alt="Orgito Leka"/>
+        <br />
+        <b>Orgito Leka</b>
+      </a>
       <br />
       <sub>Computer Science · FSHN</sub>
       <br />
       <sub>System Architecture · UML Design · IDS Engine</sub>
     </td>
     <td align="center" width="50%">
-      <br />
-      <b>Mateos Xhukellari</b>
+      <a href="https://github.com/MateosXhukellari">
+        <img src="https://github.com/MATEOS_USERNAME.png" width="120px;" alt="Mateos Xhukellari"/>
+        <br />
+        <b>Mateos Xhukellari</b>
+      </a>
       <br />
       <sub>Computer Science · FSHN</sub>
       <br />
@@ -287,10 +292,9 @@ The system models the following real-world threat vectors relevant to a universi
   </tr>
 </table>
 
-> **Institution:** Faculty of Natural Sciences (FSHN)
-> **Academic Year:** 2025–2026
-> **Course:** UML
-
+> **Institution:** Faculty of Natural Sciences (FSHN)  
+> **Academic Year:** 2025–2026  
+> **Course:** UML  
 ---
 
 ## 📜 License
