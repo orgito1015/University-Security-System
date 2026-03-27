@@ -269,7 +269,7 @@ The system models the following real-world threat vectors relevant to a universi
   <tr>
     <td align="center" width="50%">
       <a href="https://github.com/orgito1015">
-        <img src="https://github.com/ORGITO_USERNAME.png" width="120px;" alt="Orgito Leka"/>
+        <img src="https://avatars.githubusercontent.com/u/86354243?v=4" width="120px;" alt="Orgito Leka"/>
         <br />
         <b>Orgito Leka</b>
       </a>
@@ -280,7 +280,7 @@ The system models the following real-world threat vectors relevant to a universi
     </td>
     <td align="center" width="50%">
       <a href="https://github.com/MateosXhukellari">
-        <img src="https://github.com/MATEOS_USERNAME.png" width="120px;" alt="Mateos Xhukellari"/>
+        <img src="" width="120px;" alt="Mateos Xhukellari"/>
         <br />
         <b>Mateos Xhukellari</b>
       </a>
