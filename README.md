@@ -280,7 +280,7 @@ The system models the following real-world threat vectors relevant to a universi
     </td>
     <td align="center" width="50%">
       <a href="https://github.com/MateosXhukellari">
-        <img src="" width="120px;" alt="Mateos Xhukellari"/>
+        <img src="https://avatars.githubusercontent.com/u/210402974?v=4" width="120px;" alt="Mateos Xhukellari"/>
         <br />
         <b>Mateos Xhukellari</b>
       </a>
