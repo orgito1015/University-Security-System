@@ -276,7 +276,6 @@ The system models the following real-world threat vectors relevant to a universi
       <br />
       <sub>Computer Science · FSHN</sub>
       <br />
-      <sub>System Architecture · UML Design · IDS Engine</sub>
     </td>
     <td align="center" width="50%">
       <a href="https://github.com/MateosXhukellari">
@@ -287,7 +286,6 @@ The system models the following real-world threat vectors relevant to a universi
       <br />
       <sub>Computer Science · FSHN</sub>
       <br />
-      <sub>GUI Development · Domain Modelling · Threat Analysis</sub>
     </td>
   </tr>
 </table>
