@@ -288,8 +288,8 @@ The system models the following real-world threat vectors relevant to a universi
 </table>
 
 > **Institution:** Faculty of Natural Sciences (FSHN)
-> **Academic Year:** 2024–2025
-> **Course:** Cybersecurity & Information Systems
+> **Academic Year:** 2025–2026
+> **Course:** UML
 
 ---
 
@@ -303,11 +303,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software to use, copy, modify, merge, and distribute, subject to the
 conditions of the MIT License.
 ```
-
----
-
-<div align="center">
-
-**FSHN University Security System** · Built with ❤️ by Orgito Leka & Mateos Xhukellari
-
-</div>
