@@ -1,0 +1,156 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.phase{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.25rem;margin-bottom:12px}
+.phase-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.phase-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0}
+.phase-title{font-size:15px;font-weight:500;color:var(--color-text-primary)}
+.phase-sub{font-size:12px;color:var(--color-text-secondary);margin-top:1px}
+.deliverables{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tag{padding:3px 10px;border-radius:12px;font-size:12px}
+.tag-blue{background:#E6F1FB;color:#0C447C}
+.tag-purple{background:#EEEDFE;color:#3C3489}
+.tag-teal{background:#E1F5EE;color:#085041}
+.tag-amber{background:#FAEEDA;color:#633806}
+.tag-red{background:#FCEBEB;color:#791F1F}
+.tag-green{background:#EAF3DE;color:#27500A}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.mini-card{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 12px}
+.mini-title{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px}
+.mini-text{font-size:12px;color:var(--color-text-secondary);line-height:1.5}
+.section-label{font-size:11px;font-weight:500;color:var(--color-text-tertiary);letter-spacing:.05em;text-transform:uppercase;margin:14px 0 8px}
+.divider{border:none;border-top:0.5px solid var(--color-border-tertiary);margin:14px 0}
+.highlight{background:var(--color-background-secondary);border-left:3px solid #185FA5;border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;padding:10px 14px;margin-top:10px;font-size:13px;color:var(--color-text-secondary);line-height:1.6}
+</style>
+
+<div style="margin-bottom:16px">
+  <div style="font-size:18px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px">Sistem Cybersecurity për FSHN</div>
+  <div style="font-size:13px;color:var(--color-text-secondary)">Projekt UML i plotë · 4 faza · 6 diagrama</div>
+</div>
+
+<div class="section-label">Faza 1 — Analiza e kërkesave</div>
+<div class="phase">
+  <div class="phase-header">
+    <div class="phase-num" style="background:#E6F1FB;color:#0C447C">1</div>
+    <div><div class="phase-title">Identifikimi i rreziqeve në FSHN</div>
+    <div class="phase-sub">Çfarë duhet mbrojtur dhe nga kush</div></div>
+  </div>
+  <div class="grid2">
+    <div class="mini-card">
+      <div class="mini-title">Asete që mbrohen</div>
+      <div class="mini-text">Databaza e notave · Llogaritë e studentëve · Materialet e pedagogëve · Orari zyrtar · Email institucional</div>
+    </div>
+    <div class="mini-card">
+      <div class="mini-title">Kërcënimet kryesore</div>
+      <div class="mini-text">Hyrje e paautorizuar · Phishing ndaj studentëve · SQL Injection në portal · Vjedhje kredencialesh · Brute-force login</div>
+    </div>
+  </div>
+  <div class="deliverables">
+    <span class="tag tag-blue">Use Case Diagram</span>
+    <span class="tag tag-blue">Threat Model</span>
+    <span class="tag tag-blue">Risk Matrix</span>
+  </div>
+</div>
+
+<div class="section-label">Faza 2 — Dizajni i sistemit (UML kryesor)</div>
+<div class="phase">
+  <div class="phase-header">
+    <div class="phase-num" style="background:#EEEDFE;color:#3C3489">2</div>
+    <div><div class="phase-title">6 Diagramat UML të kërkuara</div>
+    <div class="phase-sub">Bërthama e projektit akademik</div></div>
+  </div>
+  <div class="grid2">
+    <div class="mini-card">
+      <div class="mini-title">Use Case Diagram</div>
+      <div class="mini-text">Aktorët: Student, Pedagog, Admin, Sulmuesi (external). Include/Extend për autentikim, 2FA, bllokime.</div>
+    </div>
+    <div class="mini-card">
+      <div class="mini-title">Class Diagram</div>
+      <div class="mini-text">User, Session, LoginAttempt, Alert, AuditLog, FirewallRule — me relacione dhe atribute.</div>
+    </div>
+    <div class="mini-card" style="margin-top:8px">
+      <div class="mini-title">Sequence Diagram</div>
+      <div class="mini-text">Fluksi i login-it me 2FA. Çfarë ndodh kur dikush fut 3 herë fjalëkalim të gabuar.</div>
+    </div>
+    <div class="mini-card" style="margin-top:8px">
+      <div class="mini-title">Activity Diagram</div>
+      <div class="mini-text">Procesi i detektimit: kërkesë hyrëse → kontroll → normal/alert → bllokim automatik.</div>
+    </div>
+    <div class="mini-card" style="margin-top:8px">
+      <div class="mini-title">State Machine Diagram</div>
+      <div class="mini-text">Gjendjet e llogarisë: Active → Locked → Under Review → Restored / Terminated.</div>
+    </div>
+    <div class="mini-card" style="margin-top:8px">
+      <div class="mini-title">Component Diagram</div>
+      <div class="mini-text">Auth Service, IDS Engine, Alert Manager, Admin Dashboard, DB — si komunikojnë.</div>
+    </div>
+  </div>
+  <div class="deliverables" style="margin-top:10px">
+    <span class="tag tag-purple">Use Case</span>
+    <span class="tag tag-purple">Class</span>
+    <span class="tag tag-purple">Sequence</span>
+    <span class="tag tag-purple">Activity</span>
+    <span class="tag tag-purple">State Machine</span>
+    <span class="tag tag-purple">Component</span>
+  </div>
+</div>
+
+<div class="section-label">Faza 3 — Funksionalitetet kryesore</div>
+<div class="phase">
+  <div class="phase-header">
+    <div class="phase-num" style="background:#E1F5EE;color:#085041">3</div>
+    <div><div class="phase-title">Çfarë bën sistemi konkretisht</div>
+    <div class="phase-sub">Features të sistemit të ri</div></div>
+  </div>
+  <div class="grid2">
+    <div class="mini-card">
+      <div class="mini-title">Autentikimi 2FA</div>
+      <div class="mini-text">Login + kod SMS/email. Bllokiim pas 3 tentativave të dështuara. Session timeout automatik.</div>
+    </div>
+    <div class="mini-card">
+      <div class="mini-title">Monitor aktivitetit</div>
+      <div class="mini-text">Çdo login regjistrohet: IP, ora, pajisja. Detektim i hyrjeve nga vende/IP të pazakonta.</div>
+    </div>
+    <div class="mini-card" style="margin-top:8px">
+      <div class="mini-title">Sistemi i alerteve</div>
+      <div class="mini-text">Admin merr njoftime për aktivitet të dyshimtë. Raporti javor i sigurisë automatik.</div>
+    </div>
+    <div class="mini-card" style="margin-top:8px">
+      <div class="mini-title">Auditimi i të dhënave</div>
+      <div class="mini-text">Kush ka ndryshuar çfarë dhe kur. Log i pandryshueshem për notat dhe oraret.</div>
+    </div>
+  </div>
+  <div class="deliverables" style="margin-top:10px">
+    <span class="tag tag-teal">2FA Module</span>
+    <span class="tag tag-teal">IDS Engine</span>
+    <span class="tag tag-teal">Audit Log</span>
+    <span class="tag tag-teal">Alert System</span>
+  </div>
+</div>
+
+<div class="section-label">Faza 4 — Dokumentacioni final</div>
+<div class="phase">
+  <div class="phase-header">
+    <div class="phase-num" style="background:#FAEEDA;color:#633806">4</div>
+    <div><div class="phase-title">Raport & Prezantim</div>
+    <div class="phase-sub">Çfarë dorëzon tek profesori</div></div>
+  </div>
+  <div class="deliverables">
+    <span class="tag tag-amber">SRS Document</span>
+    <span class="tag tag-amber">6 Diagrama UML</span>
+    <span class="tag tag-amber">Threat Model</span>
+    <span class="tag tag-amber">Test Cases</span>
+    <span class="tag tag-amber">Prezantim PPT</span>
+  </div>
+  <div class="highlight">Titulli i sugjeruar: "Dizajnimi i Sistemit të Sigurisë Informatike për Portalin Studentor të FSHN-së duke përdorur metodologjinë UML"</div>
+</div>
+
+<div class="section-label">Aktorët e sistemit (për Use Case)</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+  <span class="tag tag-blue" style="font-size:13px;padding:5px 12px">Student</span>
+  <span class="tag tag-purple" style="font-size:13px;padding:5px 12px">Pedagog</span>
+  <span class="tag tag-teal" style="font-size:13px;padding:5px 12px">Admin Sistemi</span>
+  <span class="tag tag-amber" style="font-size:13px;padding:5px 12px">Security Officer</span>
+  <span class="tag tag-red" style="font-size:13px;padding:5px 12px">Sulmuesi (external actor)</span>
+  <span class="tag tag-green" style="font-size:13px;padding:5px 12px">Sistemi IDS (actor automatik)</span>
+</div>
