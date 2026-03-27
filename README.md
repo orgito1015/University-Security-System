@@ -12,6 +12,37 @@
 
 </div>
 
+
+## Authors
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://github.com/orgito1015">
+        <img src="https://avatars.githubusercontent.com/u/86354243?v=4" width="120px;" alt="Orgito Leka"/>
+        <br />
+        <b>Orgito Leka</b>
+      </a>
+      <br />
+      <sub>Computer Science · FSHN</sub>
+      <br />
+    </td>
+    <td align="center" width="50%">
+      <a href="https://github.com/MateosXhukellari">
+        <img src="https://avatars.githubusercontent.com/u/210402974?v=4" width="120px;" alt="Mateos Xhukellari"/>
+        <br />
+        <b>Mateos Xhukellari</b>
+      </a>
+      <br />
+      <sub>Computer Science · FSHN</sub>
+      <br />
+    </td>
+  </tr>
+</table>
+
+> **Institution:** Faculty of Natural Sciences (FSHN)  
+> **Academic Year:** 2025–2026  
+> **Course:** UML  
+---
 ---
 
 ##  Table of Contents
@@ -264,36 +295,6 @@ The system models the following real-world threat vectors relevant to a universi
 
 ---
 
-## Authors
-<table>
-  <tr>
-    <td align="center" width="50%">
-      <a href="https://github.com/orgito1015">
-        <img src="https://avatars.githubusercontent.com/u/86354243?v=4" width="120px;" alt="Orgito Leka"/>
-        <br />
-        <b>Orgito Leka</b>
-      </a>
-      <br />
-      <sub>Computer Science · FSHN</sub>
-      <br />
-    </td>
-    <td align="center" width="50%">
-      <a href="https://github.com/MateosXhukellari">
-        <img src="https://avatars.githubusercontent.com/u/210402974?v=4" width="120px;" alt="Mateos Xhukellari"/>
-        <br />
-        <b>Mateos Xhukellari</b>
-      </a>
-      <br />
-      <sub>Computer Science · FSHN</sub>
-      <br />
-    </td>
-  </tr>
-</table>
-
-> **Institution:** Faculty of Natural Sciences (FSHN)  
-> **Academic Year:** 2025–2026  
-> **Course:** UML  
----
 
 ## 📜 License
 
