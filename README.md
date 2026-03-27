@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛡️ University Security System
+#  University Security System
 ### FSHN Cybersecurity Platform — Object-Oriented Java
 
 [![Java](https://img.shields.io/badge/Java-17%2B-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com)
@@ -14,7 +14,7 @@
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Overview](#-overview)
 - [System Architecture](#-system-architecture)
@@ -32,7 +32,7 @@
 
 ---
 
-## 🔍 Overview
+##  Overview
 
 The **University Security System** is an academic cybersecurity project designed for the Faculty of Natural Sciences (FSHN). It demonstrates how object-oriented principles and UML modelling can be applied to simulate and manage a real-world institutional security environment.
 
@@ -42,30 +42,30 @@ The system tracks six distinct actor types — Students, Pedagogues, System Admi
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    FSHN University Security System                   │
-│                                                                       │
-│   ┌───────────┐  ┌───────────┐  ┌──────────────┐  ┌─────────────┐  │
-│   │  Student  │  │  Pedagog  │  │ AdminSistemi │  │SecurityOffic│  │
-│   │  (User)   │  │  (Staff)  │  │  (Sys Admin) │  │  (SOC Role) │  │
-│   └─────┬─────┘  └─────┬─────┘  └──────┬───────┘  └──────┬──────┘  │
-│         │              │               │                  │          │
-│         └──────────────┴───────────────┴──────────────────┘          │
-│                                    │                                  │
-│                         ┌──────────▼──────────┐                      │
-│                         │   FSHNObjectManager  │  ← Swing GUI        │
-│                         │   (Main Controller)  │                      │
-│                         └──────────┬──────────┘                      │
-│                                    │                                  │
-│              ┌─────────────────────┴──────────────────┐              │
-│              │                                         │              │
-│   ┌──────────▼──────────┐               ┌─────────────▼────────────┐ │
-│   │      Sulmuesi        │               │        IDSEngine         │ │
-│   │  (Threat Actor)      │◄─ detected ───│  (Intrusion Detection)   │ │
-│   └─────────────────────┘               └──────────────────────────┘ │
+│                    FSHN University Security System                  │
+│                                                                     │
+│   ┌───────────┐  ┌───────────┐  ┌──────────────┐  ┌─────────────┐   │
+│   │  Student  │  │  Pedagog  │  │ AdminSistemi │  │SecurityOffic│   │
+│   │  (User)   │  │  (Staff)  │  │  (Sys Admin) │  │  (SOC Role) │   │
+│   └─────┬─────┘  └─────┬─────┘  └──────┬───────┘  └──────┬──────┘   │
+│         │              │               │                  │         │
+│         └──────────────┴───────────────┴──────────────────┘         │
+│                                    │                                │
+│                         ┌──────────▼──────────┐                     │
+│                         │   FSHNObjectManager  │  ← Swing GUI       │
+│                         │   (Main Controller)  │                    │
+│                         └──────────┬──────────┘                     │
+│                                    │                                │
+│              ┌─────────────────────┴──────────────────┐             │
+│              │                                         │            │
+│   ┌──────────▼──────────┐               ┌─────────────▼────────────┐│
+│   │      Sulmuesi        │               │        IDSEngine         │ 
+│   │  (Threat Actor)      │◄─ detected ───│  (Intrusion Detection)   │ 
+│   └─────────────────────┘               └──────────────────────────┘│
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -81,7 +81,7 @@ The system tracks six distinct actor types — Students, Pedagogues, System Admi
 
 ---
 
-## 🧩 Domain Classes (UML Actors)
+##  Domain Classes (UML Actors)
 
 ### 1. `Student` — University Student
 Represents a student account within the university portal. Tracks login attempts and account state to detect brute-force activity.
@@ -99,7 +99,7 @@ Represents a student account within the university portal. Tracks login attempts
 ---
 
 ### 2. `Pedagog` — Academic Staff (Lecturer / Professor)
-Models a teaching staff member with academic title and department affiliation. Supports grade entry and material uploads.
+Models a teaching staff member with an academic title and department affiliation. Supports grade entry and material uploads.
 
 | Field | Type | Description |
 |---|---|---|
@@ -152,7 +152,7 @@ Models a malicious actor attempting various attacks against the university netwo
 ---
 
 ### 6. `IDSEngine` — Intrusion Detection System
-Automated engine that monitors network traffic, detects suspicious patterns, and auto-blocks malicious IPs.
+An automated engine that monitors network traffic, detects suspicious patterns, and auto-blocks malicious IPs.
 
 | Field | Type | Description |
 |---|---|---|
@@ -165,20 +165,20 @@ Automated engine that monitors network traffic, detects suspicious patterns, and
 
 ---
 
-## ✨ Features
+##  Features
 
-- **🖥️ Rich Dark-Themed GUI** — Professional Java Swing dashboard with tabbed panels, data tables, and colour-coded badges for each actor type
-- **📊 Live Object Management** — Add, view, and inspect live in-memory objects for all 6 domain classes
-- **🔐 Role-Based Access Simulation** — Each actor class has its own privilege model (ReadOnly → Superadmin, Viewer → Chief)
-- **🤖 Automated IDS Engine** — Pattern-based detection (`SQL Injection`, `Brute Force`) with auto-IP blocking
-- **🛡️ Threat Actor Modelling** — Full attacker lifecycle: creation, attack simulation, and IP block
-- **📋 UML-Aligned Design** — Every class maps directly to a UML actor defined in the system's Use Case Diagram
-- **📄 Project Documentation** — HTML project plan and SVG UML diagram included for academic reference
-- **🌐 6 Dedicated Tabs** — One management tab per actor (Student, Pedagog, Admin, Officer, Attacker, IDS)
+- ** Rich Dark-Themed GUI** — Professional Java Swing dashboard with tabbed panels, data tables, and colour-coded badges for each actor type
+- ** Live Object Management** — Add, view, and inspect live in-memory objects for all 6 domain classes
+- ** Role-Based Access Simulation** — Each actor class has its own privilege model (ReadOnly → Superadmin, Viewer → Chief)
+- ** Automated IDS Engine** — Pattern-based detection (`SQL Injection`, `Brute Force`) with auto-IP blocking
+- ** Threat Actor Modelling** — Full attacker lifecycle: creation, attack simulation, and IP block
+- ** UML-Aligned Design** — Every class maps directly to a UML actor defined in the system's Use Case Diagram
+- ** Project Documentation** — HTML project plan and SVG UML diagram included for academic reference
+- ** 6 Dedicated Tabs** — One management tab per actor (Student, Pedagog, Admin, Officer, Attacker, IDS)
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 University-Security-System/
@@ -202,7 +202,7 @@ University-Security-System/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -235,7 +235,7 @@ The application window will open with six tabs — one for each domain actor —
 
 ---
 
-## 📸 Screenshots & Diagrams
+##  Screenshots & Diagrams
 
 The repository includes the following visual references:
 
@@ -249,7 +249,7 @@ Open the HTML files in any modern web browser and the SVG in any vector viewer (
 
 ---
 
-## 🔒 Security Threat Model
+##  Security Threat Model
 
 The system models the following real-world threat vectors relevant to a university environment:
 
@@ -264,7 +264,7 @@ The system models the following real-world threat vectors relevant to a universi
 
 ---
 
-## 👥 Authors
+##  Authors
 
 <table>
   <tr>
