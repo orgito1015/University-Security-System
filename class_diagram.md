@@ -149,7 +149,7 @@ classDiagram
 
 | Simboli | Lloji | Përshkrimi |
 |---------|-------|------------|
-| `<\|--` | Trashëgimi (Generalizim) | Student, Pedagog, SecurityOfficer dhe AdminSistemi zgjerojnë klasën abstrakte Actor |
+| `<|--` | Trashëgimi (Generalizim) | Student, Pedagog, SecurityOfficer dhe AdminSistemi zgjerojnë klasën abstrakte Actor |
 | `o--`   | Agregim (1 me shumë) | FSHNObjectManager mban lista të objekteve të çdo klase |
 | `..>`   | Varësi (Dependency) | IDSEngine zbule dhe bllokon objekte Sulmuesi |
 
@@ -159,7 +159,7 @@ classDiagram
 |-------|------|
 | `Actor` | Klasë abstrakte bazë për të gjithë aktorët me llogari (Python) |
 | `Student` | Studentët e universitetit; login me 2FA, kontrolli i tentativave |
-| `Pedagog` | Pedagogët; fu​t nota, ngarkon materiale |
+| `Pedagog` | Pedagogët; fut nota, ngarkon materiale |
 | `SecurityOfficer` | Oficeri i sigurisë; analizon incidente, vendos politika |
 | `AdminSistemi` | Admini i sistemit; bllokon IP, konfiguron firewall |
 | `Sulmuesi` | Aktori kërcënues i jashtëm; BruteForce / SQLInjection / Phishing |
