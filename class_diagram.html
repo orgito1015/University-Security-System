@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagrama e Klasave UML — FSHN Sistema e Sigurisë</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0C111B;
+      color: #E6E4DA;
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      padding: 32px 40px 60px;
+      min-height: 100vh;
+    }
+
+    header {
+      border-bottom: 1px solid #26344E;
+      padding-bottom: 18px;
+      margin-bottom: 28px;
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #378ADD;
+      letter-spacing: 0.02em;
+    }
+
+    header h2 {
+      font-size: 13px;
+      font-weight: 400;
+      color: #969488;
+      margin-top: 5px;
+    }
+
+    .diagram-wrap {
+      background: #121826;
+      border: 1px solid #26344E;
+      border-radius: 10px;
+      padding: 28px 20px;
+      overflow-x: auto;
+    }
+
+    .mermaid {
+      display: flex;
+      justify-content: center;
+    }
+
+    .legend {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    .legend-card {
+      background: #121826;
+      border: 1px solid #26344E;
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+
+    .legend-card h3 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #969488;
+      margin-bottom: 12px;
+    }
+
+    .legend-card table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+
+    .legend-card td {
+      padding: 5px 8px;
+      border-bottom: 1px solid #1A2438;
+      vertical-align: top;
+    }
+
+    .legend-card tr:last-child td { border-bottom: none; }
+
+    .legend-card td:first-child {
+      font-family: 'Courier New', monospace;
+      color: #378ADD;
+      white-space: nowrap;
+      width: 1%;
+      padding-right: 14px;
+    }
+
+    .legend-card td:last-child { color: #B0B8C8; }
+
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      padding: 1px 6px;
+      border-radius: 4px;
+      margin-right: 4px;
+      vertical-align: middle;
+      font-family: 'Courier New', monospace;
+    }
+    .badge-abstract { background: #1E1850; color: #9090E0; border: 1px solid #3A348A; }
+    .badge-java    { background: #0C3060; color: #60A8E8; border: 1px solid #1A5090; }
+    .badge-python  { background: #0A3830; color: #28B888; border: 1px solid #186844; }
+
+    footer {
+      margin-top: 40px;
+      font-size: 11px;
+      color: #3E4858;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>FSHN — Sistema e Sigurisë Universitare</h1>
+  <h2>Diagrama e Klasave UML &nbsp;·&nbsp; University Security System Class Diagram</h2>
+</header>
+
+<div class="diagram-wrap">
+  <div class="mermaid">
+%%{init: {
+  "theme": "dark",
+  "themeVariables": {
+    "primaryColor":       "#182133",
+    "primaryTextColor":   "#DCE0E8",
+    "primaryBorderColor": "#26344E",
+    "lineColor":          "#607898",
+    "secondaryColor":     "#1A2740",
+    "tertiaryColor":      "#0C111B",
+    "noteBkgColor":       "#1A2740",
+    "noteTextColor":      "#DCE0E8",
+    "classBorder":        "#26344E",
+    "classText":          "#DCE0E8",
+    "fillType0":          "#0E1F3A",
+    "fillType1":          "#0A2E22",
+    "fillType2":          "#2A1860",
+    "fillType3":          "#1C1800",
+    "fillType4":          "#3A0E0E",
+    "fillType5":          "#1A2740",
+    "fillType6":          "#0E1F3A",
+    "fillType7":          "#0A2E22"
+  }
+}}%%
+classDiagram
+    direction TB
+
+    class Actor {
+        <<abstract>>
+        +login(email, password)* bool
+        +logout()* void
+        +verifiko2FA(kod)* bool
+        +roli()* str
+    }
+
+    class Student {
+        -String studentId
+        -String emri
+        -String mbiemri
+        -String email
+        -String fjalekalimi
+        -String roli
+        -String gjendjaLlogarise
+        -int numTentativave
+        -Date dateRegjistrimi
+        -String departamenti
+        +login(email, pass) bool
+        +logout() void
+        +verifiko2FA(kod) bool
+        +resetFjalekalim() void
+        +rritTentativa() void
+        +resetTentativa() void
+    }
+
+    class Pedagog {
+        -String pedagogId
+        -String emri
+        -String mbiemri
+        -String email
+        -String fjalekalimi
+        -String roli
+        -String departamenti
+        -String titulliAkademik
+        -String gjendjaLlogarise
+        -Date dateRegjistrimi
+        +login(email, pass) bool
+        +logout() void
+        +verifiko2FA(kod) bool
+        +futNote(nota) void
+        +ngarkoMaterial(mat) void
+    }
+
+    class SecurityOfficer {
+        -String officerId
+        -String emri
+        -String mbiemri
+        -String email
+        -String fjalekalimi
+        -String roli
+        -int nivelAutorizimi
+        -String gjendjaLlogarise
+        -String certifikimi
+        -Date dateRegjistrimi
+        +login(email, pass) bool
+        +analizoIncident(id) void
+        +vendosPolitike(pol) void
+        +konfirmoAlert(id) void
+        +getNivelLabel() String
+    }
+
+    class AdminSistemi {
+        -String adminId
+        -String emri
+        -String mbiemri
+        -String email
+        -String fjalekalimi
+        -String roli
+        -int nivelPrivilegjeve
+        -String gjendjaLlogarise
+        -Date dateRegjistrimi
+        +login(email, pass) bool
+        +bllokIP(ip) void
+        +riaktivizoLlogari(id) void
+        +konfigurojFirewall() void
+        +gjenerojRaport() void
+        +getNivelLabel() String
+    }
+
+    class Sulmuesi {
+        -String sulmuesId
+        -String ip
+        -String tipiSulmit
+        -int numTentativave
+        -boolean eshteIBllokuar
+        -Date timestampSulm
+        -String vendOrigjines
+        -String userAgent
+        +tentoBruteForce() void
+        +tentojSQLInj() void
+        +tentojPhishing() void
+        +blloko() void
+    }
+
+    class IDSEngine {
+        -String idsId
+        -boolean eshteAktiv
+        -int pragAlertit
+        -int kerkesaPerMinute
+        -int ipBllokuaraTotale
+        -String versioni
+        -Date ngritjeHeren
+        -String statusDetektimit
+        +monitoroTrafikun() void
+        +bllokIPAuto(ip) void
+        +analizoPattern(req) boolean
+        +gjenerojLog() void
+        +aktivizo() void
+        +caktivizo() void
+    }
+
+    class FSHNObjectManager {
+        <<JFrame>>
+        +List~Student~ studentet
+        +List~Pedagog~ pedagoget
+        +List~AdminSistemi~ adminet
+        +List~SecurityOfficer~ officeret
+        +List~Sulmuesi~ sulmuesit
+        +List~IDSEngine~ idsEngines
+        +FSHNObjectManager()
+        +seedData() void
+    }
+
+    Actor <|-- Student
+    Actor <|-- Pedagog
+    Actor <|-- SecurityOfficer
+    Actor <|-- AdminSistemi
+
+    FSHNObjectManager "1" o-- "0..*" Student
+    FSHNObjectManager "1" o-- "0..*" Pedagog
+    FSHNObjectManager "1" o-- "0..*" AdminSistemi
+    FSHNObjectManager "1" o-- "0..*" SecurityOfficer
+    FSHNObjectManager "1" o-- "0..*" Sulmuesi
+    FSHNObjectManager "1" o-- "0..*" IDSEngine
+
+    IDSEngine ..> Sulmuesi : detects / blocks
+  </div>
+</div>
+
+<div class="legend">
+  <div class="legend-card">
+    <h3>Marrëdhëniet (Relationships)</h3>
+    <table>
+      <tr><td>&lt;|--</td><td>Trashëgimi — Student, Pedagog, SecurityOfficer, AdminSistemi zgjerojnë klasën abstrakte Actor</td></tr>
+      <tr><td>o--</td><td>Agregim — FSHNObjectManager mban lista të objekteve (1 me 0..*)</td></tr>
+      <tr><td>..&gt;</td><td>Varësi — IDSEngine zbule dhe bllokon objekte Sulmuesi</td></tr>
+    </table>
+  </div>
+
+  <div class="legend-card">
+    <h3>Klasat dhe Rolet</h3>
+    <table>
+      <tr>
+        <td><span class="badge badge-python">Python</span>Actor</td>
+        <td>Klasë abstrakte bazë (ABC) me metodat login, logout, verifiko2FA dhe roli</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-java">Java</span>Student</td>
+        <td>Studenti; autentikim, 2FA, kontrolli i tentativave të dështuara</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-java">Java</span>Pedagog</td>
+        <td>Pedagogu; autentikim, fut nota, ngarkon materiale</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-java">Java</span>SecurityOfficer</td>
+        <td>Oficeri i sigurisë; analizon incidente, vendos politika, konfirmon alertë</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-java">Java</span>AdminSistemi</td>
+        <td>Admini; bllokon IP, riaktivizon llogari, konfiguron firewall</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-java">Java</span>Sulmuesi</td>
+        <td>Aktori kërcënues i jashtëm: BruteForce, SQLInjection, Phishing</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-java">Java</span>IDSEngine</td>
+        <td>Sistemi IDS; monitoron trafik, bllokon IP automatikisht, analizon pattern</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-java">Java</span>FSHNObjectManager</td>
+        <td>GUI Swing (extends JFrame); agregon dhe menaxhon të gjitha objektet</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="legend-card">
+    <h3>Vizibiliteti i Anëtarëve</h3>
+    <table>
+      <tr><td>+</td><td>public — i arritshëm nga të gjitha klasat</td></tr>
+      <tr><td>-</td><td>private — i arritshëm vetëm brenda klasës</td></tr>
+      <tr><td>*</td><td>abstract — metodë abstrakte (duhet të implementohet)</td></tr>
+      <tr><td>~T~</td><td>Parametër gjenerik (p.sh. List&lt;Student&gt;)</td></tr>
+    </table>
+  </div>
+</div>
+
+<footer>
+  FSHN — Sistemi i Sigurisë Universitare &nbsp;|&nbsp; UML Class Diagram &nbsp;|&nbsp; Gjeneruar me Mermaid.js v10
+</footer>
+
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    securityLevel: 'loose',
+    theme: 'dark'
+  });
+</script>
+</body>
+</html>
